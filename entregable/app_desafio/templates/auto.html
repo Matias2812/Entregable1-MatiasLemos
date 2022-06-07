@@ -1,0 +1,20 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<form action="datos_autos" method="POST">
+    {% csrf_token %}
+    <p>Marca:</p>
+    <input type="text" name="marca">
+    <p>Ruedas:</p>
+    <input type="number" name="ruedas">
+    <p>Creacion:</p>
+    <input type="number" name="creacion"> 
+
+    <input type="submit" value="Enviar">
+</form>
+
+
+{% endblock %}

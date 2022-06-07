@@ -1,0 +1,14 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+    <h1>Buscar Auto</h1>
+    <form action="busqueda_autos" method="GET">
+        <p>Auto</p>
+        <input type="text" name="marca" id="marca">
+        <input type="submit" value="Buscar">
+    </form>
+
+{% endblock %}

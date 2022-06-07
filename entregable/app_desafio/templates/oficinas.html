@@ -1,0 +1,17 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<form action="datos_oficinas" method="POST">
+    {% csrf_token %}
+    <p>Tipos:</p>
+    <input type="text" name="tipos">
+    <p>Cantidad:</p>
+    <input type="number" name="cantidad">
+
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock %}

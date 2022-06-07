@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+    {% if oficinas %}
+
+    <ul>
+        {% for oficinas in oficinas %}
+        <li>Tipo de oficina: {{oficinas.tipos}}</li>
+        <li>Cantidad: {{oficinas.cantidad}}</li>
+        
+
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No se encontraron oficinas</p>
+    {% endif %}
+
+
+{% endblock %}

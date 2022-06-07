@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+    {% if perros %}
+
+    <ul>
+        {% for perros in perros %}
+        <li>Raza: {{perros.raza}}</li>
+        <li>Edad: {{perros.edad}}</li>
+        
+
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No se encontraron perros</p>
+    {% endif %}
+
+
+{% endblock %}

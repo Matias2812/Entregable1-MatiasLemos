@@ -1,0 +1,19 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<form action="datos_perros" method="POST">
+    {% csrf_token %}
+    <p>Raza:</p>
+    <input type="text" name="raza">
+    <p>Edad:</p>
+    <input type="number" name="edad">
+
+    <input type="submit" value="Enviar">
+</form>
+
+
+
+{% endblock %}
